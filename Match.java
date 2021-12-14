@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.awt.Image;
 
 public class Match {
     private String uid;
@@ -10,7 +10,7 @@ public class Match {
     private List<Matcher> reviews; 
 
     public User_info get_user_info() {
-	return new User_info("","",0,0,"","",new ArrayList(),0);
+	return new User_info("","",0,0,"","",new ArrayList<Image>(),0);
     }
     public boolean accept(){
 	return true;
