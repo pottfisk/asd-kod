@@ -1,17 +1,19 @@
 public class Swiping_controller {
+    Matcher matcher;
     private static Swiping_controller instance;
     public static Swiping_controller getInstance(){
 	return instance;
     }
-    public boolean accept(String uid, String match_id){
-	return true;
+    public boolean accept(String uid, int match_id){
+	return matcher.accept(uid,match_id);
     }
     
-    public boolean decline(String uid, String match_id){
-	return true;
-    }
+    public boolean decline(String uid, int match_id){
+	return matcher.decline(uid,match_id);
+    }    
     public Match suggest_match(String uid){
-	return new Match();
+	matcher = Matcher.getInstance();
+	return matcher.suggest_match(uid);
     }
 
 }

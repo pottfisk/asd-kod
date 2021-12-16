@@ -7,6 +7,8 @@ public class Account {
     private String username;
     private String password;
     private User_info user_info;
+    Account(){};
+    Account(String uid, int price,int reg_date,String user, String pass){};
     public boolean create_user_info(String uid,
 				    String name,
 				    int phone_number,
@@ -14,7 +16,7 @@ public class Account {
 				    String city,
 				    String descriptive_text,
 				    List<Image> images,
-				    int freetime){
+				    int[] freetime){
 	return true;
     }
 }

@@ -32,7 +32,7 @@ public class Database_handler {
 	return true;
     }
 
-    public boolean set_chat_data(Match match,Message msg) {
+    public boolean set_chat_data(Message msg) {
 	return true;
     }
 
@@ -64,7 +64,7 @@ public class Database_handler {
 	return "";
     }
 
-    public List<Message> get_chat_data(Match match){
+    public List<Message> get_chat_data(int match_id){
 	return new ArrayList<Message>();
     }
 

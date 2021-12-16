@@ -3,7 +3,7 @@ public class Database_pool {
     public static Database_pool getInstance(){
 	return instance;
     }
-    public Database_handler get_dB_handler(){
+    public Database_handler get_DB_handler(){
 	return new Database_handler();
     }
     public boolean set_max_amount(int size){
