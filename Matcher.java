@@ -7,7 +7,11 @@ public class Matcher {
     Database_handler db_handler;
     Match match;
     public static Matcher getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Matcher();
+	}
     }
     public Match suggest_match(String uid){
 	Database_pool db_pool = Database_pool.getInstance();

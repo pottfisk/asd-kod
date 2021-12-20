@@ -3,7 +3,11 @@ import java.util.*;
 public class Login_GUI {
     private static Login_GUI instance;
     public static Login_GUI getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Login_GUI();
+	}
     }
     public boolean view(){
 	return true;

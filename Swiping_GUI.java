@@ -4,7 +4,11 @@ public class Swiping_GUI {
     Swiping_controller sc;
     private static Swiping_GUI instance;
     public static Swiping_GUI getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Swiping_GUI();
+	}
     }
     public boolean accept(String uid, int match_id){
 	return sc.accept(uid,match_id);
@@ -23,9 +27,9 @@ public class Swiping_GUI {
     public boolean swipe(){
 	boolean direction = true;
 	if (direction){ //Swiping direction
-	    accept(uid, match.match_id);
+	    accept(uid, match.get_match_id());
 	}else {
-	    decline(uid,match.match_id);
+	    decline(uid, match.get_match_id());
 	}
 	return true;
     }

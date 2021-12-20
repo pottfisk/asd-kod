@@ -2,8 +2,7 @@ import java.util.*;
 import java.awt.Image;
 
 public class Match {
-    private String uid;
-    public int match_id;
+    private int match_id;
     private int match_date;
     private boolean shown;
     private boolean accepted;
@@ -11,7 +10,8 @@ public class Match {
     private User_info[] users;
     private Date date;
     public User_info get_user_info() {
-	return new User_info("","",0,0,"","",new ArrayList<Image>(),0);
+	int[] freetime = {};
+	return new User_info("","",0,0,"","",new ArrayList<Image>(),freetime);
     }
     public Date accept(){
 	boolean both_accepted = true;
@@ -24,6 +24,10 @@ public class Match {
     }
     public boolean decline(){
 	return true;
+    }
+
+    public int get_match_id(){
+	return match_id;
     }
     
     public Date create_date(User_info d1, User_info d2){

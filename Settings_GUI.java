@@ -4,7 +4,11 @@ public class Settings_GUI {
     private String language;
     private static Settings_GUI instance;
     public static Settings_GUI getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Settings_GUI();
+	}
     }
     public boolean delete_account(){
 	return true;

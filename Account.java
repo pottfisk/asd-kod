@@ -17,6 +17,7 @@ public class Account {
 				    String descriptive_text,
 				    List<Image> images,
 				    int[] freetime){
+	user_info = new User_info(uid,name,phone_number,age,city,descriptive_text,images,freetime);
 	return true;
     }
 }

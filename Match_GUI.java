@@ -4,7 +4,11 @@ public class Match_GUI {
     private List<String> matches;
     private static Match_GUI instance;
     public static Match_GUI getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Match_GUI();
+	}
     }
     public boolean remove(){
 	return true;

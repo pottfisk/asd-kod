@@ -4,7 +4,11 @@ public class Login_controller {
     Account a;
     private static Login_controller instance;
     public static Login_controller getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Login_controller();
+	}
     }
     public boolean verify_login(String username, String password){
 	

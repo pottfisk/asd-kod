@@ -3,9 +3,13 @@ import java.util.*;
 public class Chat_GUI {
     Chat_controller cc;    
     private List<String> messages;
-    private static Match_GUI instance;
-    public static Match_GUI getInstance(){
-	return instance;
+    private static Chat_GUI instance;
+    public static Chat_GUI getInstance(){
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Chat_GUI();
+	}
     }
     public void click_on_chat(int match_id){
 	cc = Chat_controller.getInstance();

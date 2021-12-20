@@ -2,7 +2,11 @@ public class Swiping_controller {
     Matcher matcher;
     private static Swiping_controller instance;
     public static Swiping_controller getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Swiping_controller();
+	}
     }
     public boolean accept(String uid, int match_id){
 	return matcher.accept(uid,match_id);

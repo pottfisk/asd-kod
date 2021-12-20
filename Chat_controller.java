@@ -4,7 +4,11 @@ public class Chat_controller {
     Database_pool db_pool;
     private static Chat_controller instance;
     public static Chat_controller getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Chat_controller();
+	}
     }
     public String display_message(){
 	return "";

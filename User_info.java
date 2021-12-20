@@ -19,7 +19,7 @@ public class User_info {
 		     String city,
 		     String descriptive_text,
 		     List<Image> images,
-		     int freetime){
+		     int[] freetime){
 	
     }
 }

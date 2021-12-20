@@ -2,7 +2,11 @@ public class Settings_controller {
     private Payment_method p_method;
     private static Settings_controller instance;
     public static Settings_controller getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Settings_controller();
+	}
     }
     public boolean delete_account(){
 	return true;

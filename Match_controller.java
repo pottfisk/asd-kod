@@ -5,7 +5,11 @@ public class Match_controller {
 
     private static Match_controller instance;
     public static Match_controller getInstance(){
-	return instance;
+	if(instance != null){
+	    return instance;
+	} else {
+	    return new Match_controller();
+	}
     }
     public boolean remove(){
 	return true;
